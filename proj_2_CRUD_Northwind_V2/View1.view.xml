@@ -1,0 +1,66 @@
+<mvc:View
+  controllerName="masterdetail.masterdetail.controller.View1"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page title="Products (OData V2 CRUD)">
+    <content>
+      <Table id="productTable" items="{/Products}">
+        <columns>
+          <Column><Text text="ID"/></Column>
+          <Column><Text text="Name"/></Column>
+          <Column><Text text="Price"/></Column>
+          <Column><Text text="Rating"/></Column>
+          <Column><Text text="Action"/></Column>
+          <Column><Text text="Delete"/></Column>
+          <Column><Text text="Duplicate"/></Column>
+        </columns>
+
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{ID}" />
+
+              <Input
+                value="{Name}"
+                editable="{= ${ui>/editRowId} === ${ID} }" />
+
+              <Input
+                value="{Price}"
+                type="Number"
+                editable="{= ${ui>/editRowId} === ${ID} }" />
+
+              <Input
+                value="{Rating}"
+                type="Number"
+                editable="{= ${ui>/editRowId} === ${ID} }" />
+
+              <HBox>
+                <Button
+                  text="Edit"
+                  visible="{= ${ui>/editRowId} !== ${ID} }"
+                  press=".onEdit" />
+
+                <Button
+                  text="Save"
+                  type="Emphasized"
+                  visible="{= ${ui>/editRowId} === ${ID} }"
+                  press=".onSave" />
+              </HBox>
+
+              <Button
+                text="Delete"
+                type="Reject"
+                press=".onDelete" />
+
+              <Button
+                text="Duplicate"
+                type="Emphasized"
+                press=".onDuplicate" />
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+  </Page>
+</mvc:View>
