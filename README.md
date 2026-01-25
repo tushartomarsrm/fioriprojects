@@ -6,7 +6,7 @@ This repository contains a list of small SAP Fiori / SAPUI5 projects created for
 
 ## Projects
 
-### 1. Master Detail Orders App (`proj_masterdetail`)
+### 1. Northwind Orders Display app
 
 A simple SAP Fiori application that displays orders from the Northwind OData service.
 
@@ -21,6 +21,28 @@ A simple SAP Fiori application that displays orders from the Northwind OData ser
 - JavaScript
 - XML Views
 - OData V2 (Northwind)
+
+---
+
+### 2. Product CRUD App (`proj_product_crud`)
+
+A simple SAP Fiori application that performs CRUD operations on products using an OData V2 service.
+
+**Features**
+
+* Display products in a responsive table
+* Inline row-level edit and save functionality
+* Create new products by duplicating existing ones
+* Delete products directly from the table
+* Automatic data binding with OData V2
+* UI state management using JSONModel
+
+**Tech Used**
+
+* SAPUI5
+* JavaScript
+* XML Views
+* OData V2
 
 ---
 
