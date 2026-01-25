@@ -24,7 +24,7 @@ A simple SAP Fiori application that displays orders from the Northwind OData ser
 
 ---
 
-### 2. Product CRUD App (`proj_product_crud`)
+### 2. Product CRUD App
 
 A simple SAP Fiori application that performs CRUD operations on products using an OData V2 service.
 
